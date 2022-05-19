@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <section class="vh-100 gradient-custom">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-xl-10">
+            <div class="card">
+              <div class="card-header text-center">
+                <h1 id="app-name" class="h1"></h1>
+              </div>
+              <div class="card-body p-5">
+                <div
+                  class="d-flex align-items-center justify-content-between mb-5"
+                >
+                  <form
+                    id="new-task"
+                    class="row row-cols-lg-auto g-3 align-items-center"
+                  >
+                    <div class="col-12">
+                      <label
+                        class="visually-hidden"
+                        for="inlineFormInputGroupNewTask"
+                        >New Task</label
+                      >
+                      <div class="input-group">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="inlineFormInputGroupNewTask"
+                          name="newTaskTitle"
+                          placeholder="New Task"
+                        />
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                      <button type="submit" class="btn btn-info">Add</button>
+                    </div>
+                  </form>
+                  <div class="card mb-3" style="max-width: 340px">
+                    <div class="row g-0">
+                      <div class="col-md-4">
+                        <img
+                          src="https://p.kindpng.com/picc/s/78-785975_icon-profile-bio-avatar-person-symbol-chat-icon.png"
+                          class="img-fluid rounded-start"
+                          alt="..."
+                        />
+                      </div>
+                      <div class="col-md-8">
+                        <div class="card-body">
+                          <p id="wallet-id" class="card-text"></p>
+                          <p class="card-text">
+                            <button
+                              id="logout"
+                              class="btn btn-sm btn-outline-info"
+                            >
+                              Logout
+                            </button>
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tabs Start -->
+                <ul class="nav nav-tabs" id="myTasks" role="tablist">
+                  <!-- Tab Navs Start -->
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="pending-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#pending"
+                      type="button"
+                      role="tab"
+                      aria-controls="pending"
+                      aria-selected="true"
+                    >
+                      <span id="pending-counter" class="badge bg-danger me-2">
+                        Pending
+                      </span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="active-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#active"
+                      type="button"
+                      role="tab"
+                      aria-controls="active"
+                      aria-selected="false"
+                    >
+                      <span id="pending-counter" class="badge bg-warning me-2">
+                        Active
+                      </span>
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="completed-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#completed"
+                      type="button"
+                      role="tab"
+                      aria-controls="completed"
+                      aria-selected="false"
+                    >
+                      <span id="pending-counter" class="badge bg-success me-2">
+                        Completed
+                      </span>
+                    </button>
+                  </li>
+                </ul>
+                <!-- Tab Navs End -->
+
+                <!-- Tab Content Start -->
+                <div class="tab-content" id="pendingTasksContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="pending"
+                    role="tabpanel"
+                    aria-labelledby="pending-tab"
+                  >
+                    <!-- Pending Tasks -->
+                    <ul id="pending-tasks" class="list-group mb-0"></ul>
+                    <!-- Pending Tasks -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="active"
+                    role="tabpanel"
+                    aria-labelledby="active-tab"
+                  >
+                    <!-- Active Tasks -->
+                    <ul id="active-tasks" class="list-group mb-0"></ul>
+                    <!-- Active Tasks -->
+                  </div>
+                  <div
+                    class="tab-pane fade"
+                    id="completed"
+                    role="tabpanel"
+                    aria-labelledby="completed-tab"
+                  >
+                    <!-- Completed Tasks -->
+                    <ul id="completed-tasks" class="list-group mb-0"></ul>
+                    <!-- Completed Tasks -->
+                  </div>
+                </div>
+                <!-- Tab Content Start -->
+
+                <!-- Tabs End -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/gh/nearprotocol/near-api-js/dist/near-api-js.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/config.js"></script>
+    <script src="/js/utils.js"></script>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

@@ -9,7 +9,10 @@ if (window.location.pathname === '/auth.html') {
       login();
     };
   }
-} else if (window.location.pathname === '/index.html') {
+} else if (
+  window.location.pathname === '/index.html' ||
+  window.location.pathname === '/'
+) {
   if (!isLoggedIn()) {
     window.location.href = '/auth.html';
   }
